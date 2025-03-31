@@ -62,4 +62,67 @@ console.log(tab)
 
 /* Etape 8 */
 
-for 
+for (let i = 0; i < tab.length; i++)
+  console.log(tab[i])
+
+/* Etape 9 */
+
+if (ageUser < 18) {
+  console.log("Mineur");
+} else if (ageUser >= 18 && ageUser <= 25) {
+  console.log("Jeune adulte");
+} else {
+  console.log("Adulte");
+}
+
+/* Etape 10 */
+
+//a 
+function saluerUtilisateur(nomUser) {
+  console.log("Bienvenue",nomUser);
+}
+
+saluerUtilisateur(nomUser)
+
+
+//b 
+function calculerAnneeNaissance(ageUser) {
+  age = (2025 - ageUser)
+
+  console.log(age);
+}
+
+calculerAnneeNaissance(ageUser)
+
+//c
+function verifierMajorite(ageUser) {
+  if (ageUser >= 18) {
+    console.log("True");
+  } else {
+    console.log("False");
+  }
+}
+verifierMajorite(ageUser)
+
+//d
+function afficherProfil(utilisateur) {
+  console.log(`Nom: ${utilisateur.nom}, Age: ${utilisateur.age}, Ville: ${utilisateur.ville}, Email: ${utilisateur.email}`);
+  console.log(`Amis: ${utilisateur.amis.join(", ")}`);
+}
+afficherProfil(utilisateur);
+
+//e 
+function ajouterAmi(utilisateur, prenom) {
+  utilisateur.amis.push(prenom);
+}
+ajouterAmi(utilisateur, "prenom");
+console.log(utilisateur.amis);
+
+function supprimerAmi(utilisateur, prenom) {
+  let index = utilisateur.amis.indexOf(prenom);
+  if (index !== -1) {
+      utilisateur.amis.splice(index, 1);
+  }
+}
+supprimerAmi(utilisateur, "prenom");
+console.log(utilisateur.amis);
